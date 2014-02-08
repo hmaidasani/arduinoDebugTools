@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1= title
+	.container
+		#placeholder.placeholder(style='padding: 0px; position: relative;')
+	script(src='/socket.io/socket.io.js')
+	script(type='text/javascript').
+		var socket = io.connect('http://localhost');
+		socket.on('data', function (data) {
+			console.log(data);
+			//- socket.emit('my other event', { my: 'data' });
+		});
+
+
