@@ -43,7 +43,9 @@ io.sockets.on('connection', function (socket) {
 	sp.on("open", function () {
 		// console.log('open');
 		sp.on('data', function(data) {
-		  socket.emit('data', { line : data });
+			console.log('data ' +data);
+		  socket.emit('data', handleData(data));
+
 		  // socket.on('my other event', function (data) {
 		  //   console.log(data);
 		  // });
@@ -53,6 +55,21 @@ io.sockets.on('connection', function (socket) {
   
 });
 
+function handleData(data) {
+	var result = {};
+	console.log(data);
+	if(data.indexOf('#') == 0) {
+		data = data.replace('#', '');
+		data.split(',').forEach(function(x){
+			console.log(x);
+		    var arr = x.split('=');
+		    console.log(arr);
+		    result[arr[0]] = arr[1];
+		});
+	}
+	// console.log(result);
+	return result;
+}
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port 3000' );
