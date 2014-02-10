@@ -22,14 +22,29 @@ a {
 	padding: 10px;
 }
 
+#leftPanel {
+	width:60%;
+	float:left;
+}
+#rightPanel {
+	width:40%;
+	float:right;
+}
+.graph {
+	/*float: left;*/
+/*	height: 400px;
+	width: 500px;*/
+	padding: 10px 20px;
+}
 .graph-title {
-	text-align:center;
+	padding: 0 0 5px 0px;
+	/*text-align:center;*/
 }
 
 .container {
 	box-sizing: border-box;
-	width: 500px;
-	height: 300px;
+	width: 600px;
+	height: 350px;
 	padding: 20px 15px 15px 15px;
 	margin: 5px auto 20px auto5
 	border: 1px solid #ddd;
@@ -46,4 +61,27 @@ a {
 	height: 100%;
 	font-size: 14px;
 	line-height: 1.2em;
+}
+
+.yaxisLabel {
+	top: 50%;
+	left: 2px;
+	transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+}
+.axisLabel {
+	position: absolute;
+	text-align: center;
+	font-size: 12px;
+}
+.rawData {
+	position: fixed;
 }
