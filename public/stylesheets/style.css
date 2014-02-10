@@ -23,12 +23,12 @@ a {
 }
 
 #leftPanel {
-	width:60%;
+	width:50%;
 	float:left;
 }
 #rightPanel {
-	width:40%;
-	float:right;
+	width:50%;
+	float:left;
 }
 .graph {
 	/*float: left;*/
@@ -84,4 +84,8 @@ a {
 }
 .rawData {
 	position: fixed;
+}
+.rawData ul {
+	width: 600px;
+	overflow-x: auto;
 }
