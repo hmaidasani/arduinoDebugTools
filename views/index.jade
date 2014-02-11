@@ -35,7 +35,7 @@ block content
 				margin: {
 					top: 8,
 					bottom: 20,
-					left: 20
+					//- left: 20
 				},
 			},
 			lines: {
@@ -50,17 +50,7 @@ block content
 				}
 			},
 		};
-		//- $(function() {
-		//- 	for(var i = 1; i<=4; i++) {
-		//- 		var container = $("#placeholder"+i);
-		//- 		var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
-		//- 			.text("Response Time (ms)")
-		//- 			.appendTo(container);
-		//- 		yaxisLabel.css("margin-top", yaxisLabel.width() / 2 - 20);
-
-		//- 	}
-			
-		//- });
+	
 		var seriesAInMap = {}, seriesAOutMap = {}, seriesDInMap = {}, seriesDOutMap = {};
 		var seriesAIn = [], seriesAOut = [], seriesDIn = [], seriesDOut = [];
 
@@ -167,7 +157,7 @@ block content
 			for(var i = 1; i<=4; i++) {
 				var container = $("#placeholder"+i);
 				var yaxisLabel = $("<div class='axisLabel yaxisLabel'></div>")
-					.text("Voltage (V)")
+					.text("")
 					.appendTo(container);
 				yaxisLabel.css("margin-top", yaxisLabel.width() / 2 - 20);
 			}
